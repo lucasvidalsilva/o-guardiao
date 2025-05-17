@@ -8,7 +8,7 @@
 
 O Guardião é dividido em 3 partes principais:
 
-- **Dashboard:** Exibe análises e gráficos interativos com dados (exemplo fictício por enquanto) sobre fraudes e golpes.
+- **Dashboard:** Exibe análises e gráficos interativos com dados golpes financeiros.
 - **Informativo:** Explica de forma simples e direta os tipos de golpes mais comuns, como golpes do Pix, do boleto falso e mais.
 - **Chatbot:** Um espaço para conversar com um agente virtual que ensina boas práticas para se proteger.
 

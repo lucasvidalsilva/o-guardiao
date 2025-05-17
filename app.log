@@ -1,0 +1,25 @@
+2025-05-17 17:54:42,255 - src.orchestrator - INFO - Processando a pergunta: Como se prevenir de Golpe do Pix?
+2025-05-17 17:54:42,255 - src.professor - INFO - Lido 62 registros de data\engineer_data.parquet
+2025-05-17 17:54:42,266 - src.professor - INFO - Lido 106 registros de data\analyst_data.parquet
+2025-05-17 17:54:46,721 - src.orchestrator - INFO - Processando a pergunta: Como se prevenir de Phishing?
+2025-05-17 17:54:46,733 - src.professor - INFO - Lido 62 registros de data\engineer_data.parquet
+2025-05-17 17:54:46,741 - src.professor - INFO - Lido 106 registros de data\analyst_data.parquet
+2025-05-17 17:54:50,812 - src.orchestrator - INFO - Processando a pergunta: Como se prevenir de Falso Investimento?
+2025-05-17 17:54:50,820 - src.professor - INFO - Lido 62 registros de data\engineer_data.parquet
+2025-05-17 17:54:50,829 - src.professor - INFO - Lido 106 registros de data\analyst_data.parquet
+2025-05-17 17:55:44,523 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 17:55:44,523 - __main__ - INFO - Executando o agente engineer
+2025-05-17 17:55:51,158 - src.engineer - INFO - 6 resultados reais extraídos com Gemini
+2025-05-17 17:55:51,302 - src.engineer - INFO - 68 registros salvos em data\engineer_data.parquet (6 novos)
+2025-05-17 17:55:51,308 - __main__ - INFO - Executando o agente analyst
+2025-05-17 17:55:51,396 - src.analyst - INFO - Lido 68 registros de data\engineer_data.parquet
+2025-05-17 17:55:51,497 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 17:55:51,499 - __main__ - INFO - Pipeline concluída
+2025-05-17 18:00:32,897 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 18:00:32,900 - __main__ - INFO - Executando o agente engineer
+2025-05-17 18:00:43,410 - src.engineer - INFO - 10 resultados reais extraídos com Gemini
+2025-05-17 18:00:43,780 - src.engineer - INFO - 78 registros salvos em data\engineer_data.parquet (10 novos)
+2025-05-17 18:00:43,780 - __main__ - INFO - Executando o agente analyst
+2025-05-17 18:00:43,845 - src.analyst - INFO - Lido 78 registros de data\engineer_data.parquet
+2025-05-17 18:00:43,903 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 18:00:43,905 - __main__ - INFO - Pipeline concluída
