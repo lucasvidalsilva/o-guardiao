@@ -31,3 +31,45 @@
 2025-05-17 15:59:24,454 - src.analyst - WARNING - Nenhum dado para analisar
 2025-05-17 15:59:24,456 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
 2025-05-17 15:59:24,456 - __main__ - INFO - Pipeline concluída
+2025-05-17 16:26:28,658 - src.engineer - ERROR - GEMINI_API_KEY não encontrada no .env
+2025-05-17 16:27:05,780 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 16:27:05,780 - __main__ - INFO - Executando o agente engineer
+2025-05-17 16:27:06,947 - src.engineer - ERROR - Erro ao buscar dados com Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-05-17 16:27:07,070 - src.engineer - INFO - 2 registros salvos em data\engineer_data.parquet
+2025-05-17 16:27:07,070 - __main__ - INFO - Executando o agente analyst
+2025-05-17 16:27:07,155 - src.analyst - INFO - Lido 2 registros de data\engineer_data.parquet
+2025-05-17 16:27:07,176 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 16:27:07,176 - __main__ - INFO - Pipeline concluída
+2025-05-17 16:33:28,428 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 16:33:28,429 - __main__ - INFO - Executando o agente engineer
+2025-05-17 16:33:30,370 - src.engineer - INFO - 0 resultados reais extraídos com Gemini
+2025-05-17 16:33:30,446 - src.engineer - INFO - 0 registros salvos em data\engineer_data.parquet
+2025-05-17 16:33:30,446 - __main__ - INFO - Executando o agente analyst
+2025-05-17 16:33:30,633 - src.analyst - INFO - Lido 0 registros de data\engineer_data.parquet
+2025-05-17 16:33:30,633 - src.analyst - WARNING - Nenhum dado para analisar
+2025-05-17 16:33:30,633 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 16:33:30,633 - __main__ - INFO - Pipeline concluída
+2025-05-17 16:35:20,461 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 16:35:20,469 - __main__ - INFO - Executando o agente engineer
+2025-05-17 16:35:27,844 - src.engineer - INFO - 6 resultados reais extraídos com Gemini
+2025-05-17 16:35:27,903 - src.engineer - INFO - 6 registros salvos em data\engineer_data.parquet
+2025-05-17 16:35:27,904 - __main__ - INFO - Executando o agente analyst
+2025-05-17 16:35:27,977 - src.analyst - INFO - Lido 6 registros de data\engineer_data.parquet
+2025-05-17 16:35:28,008 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 16:35:28,008 - __main__ - INFO - Pipeline concluída
+2025-05-17 16:39:54,701 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 16:39:54,701 - __main__ - INFO - Executando o agente engineer
+2025-05-17 16:40:02,304 - src.engineer - INFO - 5 resultados reais extraídos com Gemini
+2025-05-17 16:40:02,369 - src.engineer - INFO - 11 registros salvos em data\engineer_data.parquet (5 novos)
+2025-05-17 16:40:02,369 - __main__ - INFO - Executando o agente analyst
+2025-05-17 16:40:02,397 - src.analyst - INFO - Lido 11 registros de data\engineer_data.parquet
+2025-05-17 16:40:02,418 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 16:40:02,418 - __main__ - INFO - Pipeline concluída
+2025-05-17 16:41:16,369 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 16:41:16,369 - __main__ - INFO - Executando o agente engineer
+2025-05-17 16:41:23,610 - src.engineer - INFO - 5 resultados reais extraídos com Gemini
+2025-05-17 16:41:23,634 - src.engineer - INFO - 16 registros salvos em data\engineer_data.parquet (5 novos)
+2025-05-17 16:41:23,642 - __main__ - INFO - Executando o agente analyst
+2025-05-17 16:41:23,655 - src.analyst - INFO - Lido 16 registros de data\engineer_data.parquet
+2025-05-17 16:41:23,659 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 16:41:23,659 - __main__ - INFO - Pipeline concluída
