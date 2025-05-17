@@ -81,7 +81,7 @@ o-guardiao/
 
 ---
 
-## Feito por
+## End
 
 Desenvolvido com ajuda do Gemini e utilizando o conhecimento fornecido pela Imersão Alura + Google IA 2025.
 Espero que gostem, e se quiserem darem alguma sugestão, fiquem a vontade!
