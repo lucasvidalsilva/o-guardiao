@@ -1,0 +1,33 @@
+2025-05-17 15:56:10,200 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 15:56:10,201 - __main__ - INFO - Executando o agente engineer
+2025-05-17 15:56:10,204 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 15:56:10,936 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "accessNotConfigured"
+2025-05-17 15:56:10,937 - src.engineer - ERROR - Erro na API de busca: <HttpError 403 when requesting https://customsearch.googleapis.com/customsearch/v1?q=Golpes+financeiros+Brasil+2025&cx=72da761ae68504fdc&num=10&key=AIzaSyC-QvmbrxtRGRMoOGpFVvyD2hP8RRKKVmY&alt=json returned "Custom Search API has not been used in project 510682016265 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/customsearch.googleapis.com/overview?project=510682016265 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.". Details: "[{'message': 'Custom Search API has not been used in project 510682016265 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/customsearch.googleapis.com/overview?project=510682016265 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'domain': 'usageLimits', 'reason': 'accessNotConfigured', 'extendedHelp': 'https://console.developers.google.com'}]">
+2025-05-17 15:56:11,029 - src.engineer - INFO - 0 registros salvos em data\engineer_data.parquet
+2025-05-17 15:56:11,029 - __main__ - INFO - Executando o agente analyst
+2025-05-17 15:56:11,143 - src.analyst - INFO - Lido 0 registros de data\engineer_data.parquet
+2025-05-17 15:56:11,143 - src.analyst - WARNING - Nenhum dado para analisar
+2025-05-17 15:56:11,147 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 15:56:11,147 - __main__ - INFO - Pipeline concluída
+2025-05-17 15:59:18,734 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 15:59:18,734 - __main__ - INFO - Executando o agente engineer
+2025-05-17 15:59:18,736 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 15:59:19,166 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "accessNotConfigured"
+2025-05-17 15:59:19,166 - src.engineer - ERROR - Erro na API de busca: <HttpError 403 when requesting https://customsearch.googleapis.com/customsearch/v1?q=Golpes+financeiros+Brasil+2025&cx=72da761ae68504fdc&num=10&key=AIzaSyC-QvmbrxtRGRMoOGpFVvyD2hP8RRKKVmY&alt=json returned "Custom Search API has not been used in project 510682016265 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/customsearch.googleapis.com/overview?project=510682016265 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.". Details: "[{'message': 'Custom Search API has not been used in project 510682016265 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/customsearch.googleapis.com/overview?project=510682016265 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'domain': 'usageLimits', 'reason': 'accessNotConfigured', 'extendedHelp': 'https://console.developers.google.com'}]">
+2025-05-17 15:59:19,216 - src.engineer - INFO - 0 registros salvos em data\engineer_data.parquet
+2025-05-17 15:59:19,216 - __main__ - INFO - Executando o agente analyst
+2025-05-17 15:59:19,231 - src.analyst - INFO - Lido 0 registros de data\engineer_data.parquet
+2025-05-17 15:59:19,231 - src.analyst - WARNING - Nenhum dado para analisar
+2025-05-17 15:59:19,233 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 15:59:19,234 - __main__ - INFO - Pipeline concluída
+2025-05-17 15:59:23,998 - __main__ - INFO - Iniciando a pipeline
+2025-05-17 15:59:23,998 - __main__ - INFO - Executando o agente engineer
+2025-05-17 15:59:24,000 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 15:59:24,403 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "accessNotConfigured"
+2025-05-17 15:59:24,404 - src.engineer - ERROR - Erro na API de busca: <HttpError 403 when requesting https://customsearch.googleapis.com/customsearch/v1?q=Golpes+financeiros+Brasil+2025&cx=72da761ae68504fdc&num=10&key=AIzaSyC-QvmbrxtRGRMoOGpFVvyD2hP8RRKKVmY&alt=json returned "Custom Search API has not been used in project 510682016265 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/customsearch.googleapis.com/overview?project=510682016265 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.". Details: "[{'message': 'Custom Search API has not been used in project 510682016265 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/customsearch.googleapis.com/overview?project=510682016265 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'domain': 'usageLimits', 'reason': 'accessNotConfigured', 'extendedHelp': 'https://console.developers.google.com'}]">
+2025-05-17 15:59:24,437 - src.engineer - INFO - 0 registros salvos em data\engineer_data.parquet
+2025-05-17 15:59:24,437 - __main__ - INFO - Executando o agente analyst
+2025-05-17 15:59:24,454 - src.analyst - INFO - Lido 0 registros de data\engineer_data.parquet
+2025-05-17 15:59:24,454 - src.analyst - WARNING - Nenhum dado para analisar
+2025-05-17 15:59:24,456 - src.analyst - INFO - Análise salva em data\analyst_data.parquet
+2025-05-17 15:59:24,456 - __main__ - INFO - Pipeline concluída
