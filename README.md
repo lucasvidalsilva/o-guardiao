@@ -1,87 +1,66 @@
-# 🛡️ O Guardião
+# O Guardião — educação sobre golpes digitais
 
-**O Guardião** é um projeto que criei com o objetivo de ajudar pessoas a se protegerem de golpes digitais. Ele funciona como uma central interativa com dados, explicações e até um chatbot educativo sobre fraudes online. Feito usando Python, Streamlit, e algumas integrações com Gemini IA através de sua API KEY.
+Aplicação Streamlit que reúne um painel descritivo, conteúdo educativo e um chatbot apoiado por Gemini para falar sobre prevenção a golpes financeiros.
 
----
+**Estado:** protótipo executável com dados Parquet versionados. O pipeline de coleta depende de uma API de IA e de busca, não há testes automatizados e as respostas do chatbot não devem ser tratadas como orientação jurídica, financeira ou de segurança garantida.
 
-## O que o Guardião faz
+## Componentes
 
-O Guardião é dividido em 3 partes principais:
+```mermaid
+flowchart LR
+    SEARCH["busca web via Gemini"] --> ENG["EngineerAgent<br/>normalização"]
+    ENG --> RAW["engineer_data.parquet"]
+    RAW --> ANA["AnalystAgent<br/>agregações"]
+    ANA --> MET["analyst_data.parquet"]
+    RAW --> APP["Streamlit"]
+    MET --> APP
+    APP --> PROF["ProfessorAgent<br/>resposta educativa"]
+```
 
-- **Dashboard:** Exibe análises e gráficos interativos com dados golpes financeiros.
-- **Informativo:** Explica de forma simples e direta os tipos de golpes mais comuns, como golpes do Pix, do boleto falso e mais.
-- **Chatbot:** Um espaço para conversar com um agente virtual que ensina boas práticas para se proteger.
+- `EngineerAgent`: solicita resultados sobre golpes, normaliza campos e acrescenta ao Parquet.
+- `AnalystAgent`: calcula contagens e percentuais simples.
+- `ProfessorAgent`: monta contexto com os dois Parquets e consulta o Gemini.
+- `app.py`: interface de dashboard, conteúdo e chat.
 
----
+## Executar
 
-## Como rodar o projeto
-
-### 1. Clone o repositório
+Pré-requisitos: Python compatível com as versões do `requirements.txt` e uma chave Gemini.
 
 ```bash
-git clone https://github.com/seu-usuario/o-guardiao.git
+git clone https://github.com/lucasvidalsilva/o-guardiao.git
 cd o-guardiao
-```
-
-### 2. Crie e ative um ambiente virtual
-
-```bash
-python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
-```
-
-### 3. Instale as dependências
-
-```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# Linux/macOS: source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Execute o projeto
+Crie um `.env` local:
+
+```dotenv
+GEMINI_API_KEY=sua_chave
+```
+
+Depois:
 
 ```bash
 streamlit run app.py
 ```
 
-Pronto! O navegador vai abrir com o painel interativo. Se não abrir automaticamente, acesse `http://localhost:8501`.
+O painel pode usar os arquivos existentes em `data/`. A atualização do conteúdo ocorre pelas ações expostas na interface/orquestrador e depende do provedor externo.
 
----
+## Dados e evidências
 
-## Estrutura do Projeto
+Os Parquets atuais permitem inspecionar o formato esperado, mas não comprovam cobertura do fenômeno, representatividade ou atualização contínua. A origem de cada registro, termos de uso e critérios de busca precisam ser versionados antes de apresentar métricas como pesquisa confiável.
 
-```bash
-o-guardiao/
-├── app.py                  # arquivo principal com a interface do Streamlit
-├── requirements.txt        # lista de bibliotecas necessárias
-├── app.log                 # arquivo de log de execução dos codigos 
-├── src/
-│   ├── orchestrator.py     # o que orquestra a execução das pipelines dos agentes
-│   ├── engineer.py         # codigo do agente engenherio de dados
-│   ├── analyst.py          # codigo do analista de dados
-│   ├── professor.py        # codigo do professor que sabe sobre golpes financeiros
-│   └── utils.py            # funções dos logs
-├── data/
-│   └── analyst_data.parquet     # dados gerados pelo agente Analista a partir do arquivo do Engenheiro
-│   └── engineer_data.parquet    # dados extraido pelo agente Engenheiro com prompt utilizando a Gemini API
-```
+## Limitações e segurança
 
----
+- conteúdo gerado por IA pode conter erros e deve incluir fontes verificáveis;
+- não há avaliação sistemática das respostas do chatbot;
+- não há testes unitários, CI ou fixture sintética;
+- `app.log`, `__pycache__` e bytecode estão versionados e deveriam ser removidos do Git;
+- o pipeline acrescenta resultados ao Parquet sem uma chave de deduplicação explícita;
+- a configuração YAML menciona planilhas, mas o fluxo atual usa Parquet;
+- chaves devem permanecer somente no `.env` local.
 
-## Observações
-
-- Os dados vem de pouco em pouco quando vai executanto o orquestrador.py, mas pode alterar para fazer carga mais pesadas.
-
----
-
-## Futuras melhorias
-
-- Fazer uma tratação mais avançada de dados.
-- Armazenar os dados em um banco como o Postgresql.
-- Construção de um dashboard mais elaborado.
-- Melhorar o agente Analise para criar metricas poderosas, como descobrir um perfil de alguem que cai mas em golpe.
-
----
-
-## End
-
-Desenvolvido com ajuda do Gemini e utilizando o conhecimento fornecido pela Imersão Alura + Google IA 2025.
-Espero que gostem, e se quiserem darem alguma sugestão, fiquem a vontade!
+Roadmap recomendado: proveniência por registro, deduplicação, testes das métricas, respostas com citações e um conjunto de avaliação para o chatbot.
